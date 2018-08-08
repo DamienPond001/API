@@ -18,6 +18,7 @@ class Store(Resource):
       if store is not None:
          return {"message": "Store exists"} , 400
       
+      store = StoreModel(name)
       try:
          store.save_to_db()
       except:
